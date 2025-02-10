@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Parabank Automation Suite">
+<!--    <test name="Login Test">-->
+<!--        <classes>-->
+<!--            <parameter name = "browser" value = "chrome" />-->
+<!--            <class name="com.parabank.tests.LoginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="Registration Test">
+        <classes>
+            <parameter name = "browser" value = "chrome" />
+            <class name="com.parabank.tests.LoginTest"/>
+        </classes>
+    </test>
+</suite>

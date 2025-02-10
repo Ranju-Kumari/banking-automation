@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'idea'  // For IDE support (e.g., IntelliJ IDEA)
+}
+
+group 'com.parabank'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '11'  // Make sure this matches your Java version
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // REST Assured for API testing
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.24.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.27.0'
+
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '5.5.0'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.9.2'
+
+//    testImplementation 'org.seleniumhq.selenium:selenium-java:4.8.0'
+//    testImplementation 'org.testng:testng:7.7.0'
+//    testImplementation 'org.apache.poi:poi:5.2.3' // If you need Excel support for data-driven testing
+//    testImplementation 'org.apache.poi:poi-ooxml:5.2.3' // For Excel File Support
+    testImplementation 'org.testng:testng:7.7.0'
+}
+
+test {
+    useTestNG()
+    testLogging {
+        events 'passed', 'failed', 'skipped'
+    }
+}
