@@ -9,7 +9,7 @@
     <test name="Registration Test">
         <classes>
             <parameter name = "browser" value = "chrome" />
-            <class name="com.parabank.tests.LoginTest"/>
+            <class name="com.parabank.tests.RegistrationTest"/>
         </classes>
     </test>
 </suite>
